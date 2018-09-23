@@ -6,9 +6,10 @@ import java.util.List;
 public class Dessin {
 	private int nombre = 0;
 	private List<Rectqngle> tableau = new ArrayList<Rectqngle>();
-	public Dessin()
+	public Dessin(int size)
 	{
-		
+		tableau  = new ArrayList<>(size);
+		nombre = 0;
 	}
 	public List<Rectqngle> add(Rectqngle r)
 	{
@@ -16,4 +17,14 @@ public class Dessin {
 		nombre++;
 		return (tableau);
 	}
+	public double surface()
+	{
+		double sum = 0;
+		for(int i = 0 ; i< nombre; i++)
+		{
+			sum += tableau.get(i).surface();
+		}
+		return sum;
+	}
+	pub
 }

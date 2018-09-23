@@ -54,6 +54,10 @@ public class Rectqngle {
 	{
 		return r.xlength * r.ylength;
 	}
+	public double surface()
+	{
+		return xlength*ylength;
+	}
 	public boolean contains(Point r)
 	{
 		if(origin.x <= r.x && r.x <= origin.x + xlength && origin.y<= r.y && r.y<= origin.y + ylength)
