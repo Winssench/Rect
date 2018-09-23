@@ -26,5 +26,35 @@ public class Dessin {
 		}
 		return sum;
 	}
-	pub
+	public void translate(double dx, double dy)
+	{
+		for(int i = 0 ; i< nombre; i++)
+		{
+			tableau.get(i).translate(dx, dy);
+		}
+	}
+	// teste si un rectangle est dans un des rectangle de dessin
+	public boolean contains(Rectqngle r)
+	{
+		for(int i = 0 ; i< nombre; i++)
+		{
+			if(tableau.get(i).contains(r))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	public boolean contains(Point p)
+	{
+		for(int i = 0 ; i< nombre; i++)
+		{
+			if(tableau.get(i).contains(p))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
 }
